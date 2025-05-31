@@ -4,14 +4,11 @@ import screenshotOne from "./assets/screenshot-one.png";
 import "./App.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-
 function App() {
     const [isBouncing, setIsBouncing] = useState(false);
 
-    const [firstImage, setFirstImage] = useState("-30vw");
     const [firstImageOpacity, setFirstImageOpacity] = useState(0);
     const [firstImageRotation, setFirstImageRotation] = useState("-30deg");
-    const [secondImage, setSecondImage] = useState("100vw");
     const [secondImageOpacity, setSecondImageOpacity] = useState(0);
     const [secondImageRotation, setSecondImageRotation] = useState("30deg");
 
@@ -34,71 +31,37 @@ function App() {
             if (!firstContainer || !secondContainer || !thirdContainer) return;
 
             const windowHeight = window.innerHeight;
+
+            const getOffsetFromTop = (rect) => rect.top / windowHeight;
+
             const firstRect = firstContainer.getBoundingClientRect();
             const secondRect = secondContainer.getBoundingClientRect();
             const thirdRect = thirdContainer.getBoundingClientRect();
 
-            // Visibility of the first container
-            const firstVisibleTop = Math.max(0, -firstRect.top);
-            const firstVisibleBottom = Math.min(
-                firstRect.height,
-                windowHeight - firstRect.top
-            );
-            const firstVisibleHeight = Math.max(
-                0,
-                firstVisibleBottom - firstVisibleTop
-            );
-            const firstProgress = firstVisibleHeight / firstRect.height;
+            const firstOffset = getOffsetFromTop(firstRect);
+            const secondOffset = getOffsetFromTop(secondRect);
+            const thirdOffset = getOffsetFromTop(thirdRect);
 
-            // Visibility of the second container
-            const secondVisibleTop = Math.max(0, -secondRect.top);
-            const secondVisibleBottom = Math.min(
-                secondRect.height,
-                windowHeight - secondRect.top
-            );
-            const secondVisibleHeight = Math.max(
-                0,
-                secondVisibleBottom - secondVisibleTop
-            );
-            const secondProgress = secondVisibleHeight / secondRect.height;
-
-            // Visibility of the third container
-            const thirdVisibleTop = Math.max(0, -thirdRect.top);
-            const thirdVisibleBottom = Math.min(
-                thirdRect.height,
-                windowHeight - thirdRect.top
-            );
-            const thirdVisibleHeight = Math.max(
-                0,
-                thirdVisibleBottom - thirdVisibleTop
-            );
-            const thirdProgress = thirdVisibleHeight / thirdRect.height;
-
-            // Control first image
-            if (secondProgress > 0.2) {
-                setFirstImage("100vw");
+            // First image
+            if (secondOffset < 0.2) {
                 setFirstImageOpacity(0);
                 setFirstImageRotation("30deg");
-            } else if (firstProgress < 0.2 && secondProgress < 0.2) {
-                setFirstImage("-30vw");
+            } else if (firstOffset > 0.8) {
                 setFirstImageOpacity(0);
                 setFirstImageRotation("-30deg");
             } else {
-                setFirstImage("calc(50% - 15vw)");
                 setFirstImageOpacity(1);
                 setFirstImageRotation("0deg");
             }
 
-            if (thirdProgress > 0.2) {
-                setSecondImage("-30vw");
+            // Second image
+            if (thirdOffset < 0.2) {
                 setSecondImageOpacity(0);
                 setSecondImageRotation("-30deg");
-            } else if (secondProgress > 0.2) {
-                setSecondImage("calc(50% - 15vw)");
+            } else if (secondOffset < 0.8) {
                 setSecondImageOpacity(1);
                 setSecondImageRotation("0deg");
             } else {
-                setSecondImage("100vw");
                 setSecondImageOpacity(0);
                 setSecondImageRotation("30deg");
             }
@@ -110,19 +73,22 @@ function App() {
 
     return (
         <>
-            <div className="logo-container">
-                <img
-                    src={logo}
-                    alt="logo"
-                    onClick={handleClick}
-                    className={`logo ${isBouncing ? "bounce" : ""}`}
-                    draggable={false}
-                />
-                <div>
-                    <p className="slogan-text">
-                        Dine with a Match, Not a Maybe.
-                    </p>
-                    <p>
+            <div className="first-container">
+                <div className="logo-container">
+                    <img
+                        src={logo}
+                        alt="logo"
+                        onClick={handleClick}
+                        className={`logo ${isBouncing ? "bounce" : ""}`}
+                        draggable={false}
+                    />
+                    <div>
+                        <p className="slogan-text">Dine with a Match.</p>
+                        <p className="slogan-text">Not a Maybe.</p>
+                    </div>
+                </div>
+                <div className="logo-container-text">
+                    <p className="description-text">
                         Soon to be available on the App Store and Google Play.
                     </p>
                 </div>
@@ -134,9 +100,12 @@ function App() {
                     className="screenshot_one"
                     alt="First screenshot"
                     style={{
-                        left: firstImage,
+                        left: "50%",
                         opacity: firstImageOpacity,
-                        transform: `translateY(-50%) rotate(${firstImageRotation})`,
+                        transform: `translate(-50%, -50%) rotate(${firstImageRotation})`,
+                        transition: "all 0.6s ease",
+                        position: "absolute",
+                        top: "50%",
                     }}
                 />
             </div>
@@ -147,22 +116,35 @@ function App() {
                     className="screenshot_two"
                     alt="Second screenshot"
                     style={{
-                        left: secondImage,
+                        left: "50%",
                         opacity: secondImageOpacity,
-                        transform: `translateY(-50%) rotate(${secondImageRotation})`,
+                        transform: `translate(-50%, -50%) rotate(${secondImageRotation})`,
+                        transition: "all 0.6s ease",
+                        position: "absolute",
+                        top: "50%",
                     }}
                 />
             </div>
 
             <div className="footer" ref={thirdContainerRef}>
                 <p className="footer-text">Made with ❤️ by koleks92</p>
-                <div>
-                    <p className="social-icons">
+                <div className="social-icons-container">
+                    <a
+                        href="https://www.linkedin.com/in/jan-konieczek/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="social-icons"
+                    >
                         <FaLinkedin />
-                    </p>
-                    <p className="social-icons">
+                    </a>
+                    <a
+                        href="https://github.com/koleks92"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="social-icons"
+                    >
                         <FaGithub />
-                    </p>
+                    </a>
                 </div>
             </div>
         </>

@@ -8,6 +8,19 @@
     --color-red: #f24822;
 }
 
+a {
+    color: var(--color-black);
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+a:hover {
+    color: var(--color-black);
+    transform: scale(1.05);
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
 body {
     margin: 0;
     font-family: "Tektur", sans-serif;
@@ -15,22 +28,58 @@ body {
     color: var(--color-black);
 }
 
-.logo-container {
+.first-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
+    justify-content: space-evenly;
     width: 100vw;
     height: 100vh;
     background-color: var(--color-background, #f2de77);
     text-align: center;
 }
 
+.logo-container {
+    display: flex;
+    flex: 4;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo {
+    width: 80vw;
+}
+
+@media (min-width: 700px) {
+    .logo {
+        width: 50vw;
+    }
+}
+
 .slogan-text {
     font-size: 2rem;
+    margin: 0;
     font-weight: bold;
     color: var(--color-black);
-    margin-top: 20px;
+}
+
+@media (min-width: 700px) {
+    .slogan-text {
+        font-size: 2.5rem;
+    }
+}
+
+.logo-container-text {
+    display: flex;
+    flex: 1;
+}
+
+.description-text {
+    font-size: 1.2rem;
+    margin: 2rem;
+    color: var(--color-black);
 }
 
 .screenshot-container-one {
@@ -42,6 +91,33 @@ body {
     align-items: center;
     justify-content: center; /* optional if you use absolute positioning */
     background-color: var(--color-background-second);
+}
+
+.screenshot_one {
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    transition: left 0.5s ease-out, opacity 0.6s ease, transform 0.6s ease;
+    overflow: hidden;
+}
+
+.screenshot_two {
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    transition: left 0.5s ease-out, opacity 0.6s ease, transform 0.6s ease;
+    overflow: hidden;
+}
+
+.screenshot-container-two {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* optional if you use absolute positioning */
+    background-color: var(--color-background-third, #f2de77);
 }
 
 .footer {
@@ -62,42 +138,18 @@ body {
     text-align: center;
 }
 
+.social-icons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0rem;
+}
+
 .social-icons {
     font-size: 3rem;
+    margin: 0.5rem;
 }
-
-.screenshot_one {
-    width: 30vw;
-    position: absolute;
-    top: 50%;
-    transition: left 0.5s ease-out, opacity 0.6s ease, transform 0.6s ease;
-    overflow: hidden;
-}
-
-.screenshot_two {
-    width: 30vw;
-    position: absolute;
-    top: 50%;
-    transition: left 0.5s ease-out, opacity 0.6s ease, transform 0.6s ease;
-    overflow: hidden;
-}
-
-.screenshot-container-two {
-    position: relative;
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* optional if you use absolute positioning */
-    background-color: var(--color-background-third, #f2de77);
-}
-
-.logo {
-    width: 40vw;
-    height: auto;
-}
-
 @keyframes bounce {
     0%,
     100% {
