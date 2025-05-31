@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import logo from "./assets/logo.png";
 import screenshotOne from "./assets/screenshot-one.png";
+import screenshotTwo from "./assets/screenshot-two.png";
 import "./App.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
@@ -112,7 +113,7 @@ function App() {
 
             <div className="screenshot-container-two" ref={secondContainerRef}>
                 <img
-                    src={screenshotOne}
+                    src={screenshotTwo}
                     className="screenshot_two"
                     alt="Second screenshot"
                     style={{
