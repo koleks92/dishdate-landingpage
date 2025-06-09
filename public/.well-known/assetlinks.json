@@ -1,12 +1,12 @@
 [
-  {
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "com.koleks92.DishDate",
-      "sha256_cert_fingerprints": [
-        "1A:AA:D8:00:2D:13:84:53:AF:99:B5:44:E1:54:C9:AA:C5:BD:FB:EB:2D:51:AA:6B:59:D0:86:8A:1B:51:8F:53"
-      ]
+    {
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.koleks92.DishDate",
+            "sha256_cert_fingerprints": [
+                "1A:AA:D8:00:2D:13:84:53:AF:99:B5:44:E1:54:C9:AA:C5:BD:FB:EB:2D:51:AA:6B:59:D0:86:8A:1B:51:8F:53"
+            ]
+        }
     }
-  }
 ]
