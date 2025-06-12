@@ -1,27 +1,24 @@
 {
   "applinks": {
+    "apps": [],
     "details": [
       {
-        "appIDs": [
-          "DXG99AV59K.app.expo.dishdatelandingpage"
-        ],
-        "components": [
-          {
-            "/": "*",
-            "comment": "Matches all routes"
-          }
+        "appID": "DXG99AV59K.com.koleks92.DishDate",
+        "paths": [
+          "/join-game*",
+          "/"
         ]
       }
     ]
   },
   "activitycontinuation": {
     "apps": [
-      "DXG99AV59K.app.expo.dishdatelandingpage"
+      "DXG99AV59K.com.koleks92.DishDate"
     ]
   },
   "webcredentials": {
     "apps": [
-      "DXG99AV59K.app.expo.dishdatelandingpage"
+      "DXG99AV59K.com.koleks92.DishDate"
     ]
   }
 }
