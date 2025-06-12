@@ -1,0 +1,27 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "DXG99AV59K.app.expo.dishdatelandingpage"
+        ],
+        "components": [
+          {
+            "/": "*",
+            "comment": "Matches all routes"
+          }
+        ]
+      }
+    ]
+  },
+  "activitycontinuation": {
+    "apps": [
+      "DXG99AV59K.app.expo.dishdatelandingpage"
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "DXG99AV59K.app.expo.dishdatelandingpage"
+    ]
+  }
+}
