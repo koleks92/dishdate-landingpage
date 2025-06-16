@@ -24,6 +24,18 @@ function App() {
     };
 
     useEffect(() => {
+        // Detect deep link fallback
+        const path = window.location.pathname;
+
+        if (path === "/join-game") {
+            // Optional delay so app has a chance to open
+            setTimeout(() => {
+                // Redirect to the homepage
+                window.location.replace("/");
+            }, 2000); // 2-second wait before redirect
+        }
+
+        // Handle scroll events for image animations
         const handleScroll = () => {
             const firstContainer = firstContainerRef.current;
             const secondContainer = secondContainerRef.current;
