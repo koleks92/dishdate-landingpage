@@ -104,6 +104,12 @@ function App() {
                     <p className="description-text">
                         Soon to be available on the App Store and Google Play.
                     </p>
+                    <p className="tester-text">
+                        <a href="#tester-container">
+                            Become a <b>tester</b> and help us with the final
+                            touches!
+                        </a>
+                    </p>
                 </div>
             </div>
 
@@ -139,7 +145,67 @@ function App() {
                 />
             </div>
 
-            <div className="footer" ref={thirdContainerRef}>
+            <div
+                className="tester-container"
+                id="tester-container"
+                ref={thirdContainerRef}
+            >
+                <h2>Become a Tester</h2>
+                <p className="tester-description">
+                    We are looking for enthusiastic testers to help us refine
+                    our app before its official launch. If you're interested in
+                    being among the first to experience DishDate and provide
+                    valuable feedback, we would love to have you on board!
+                </p>
+
+                <h2> How to become a tester ?</h2>
+                <h3>Android:</h3>
+                <p className="tester-text-steps">
+                    1. Join our Google Group:{" "}
+                    <a
+                        href="https://groups.google.com/g/dishdate-testers-groups"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="tester-link"
+                    >
+                        DishDate Testers Group
+                    </a>
+                </p>
+                <p className="tester-text-steps">
+                    2. Become a tester and download the app:{" "}
+                    <a
+                        href="https://play.google.com/apps/testing/com.koleks92.DishDate"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="tester-link"
+                    >
+                        DishDate on Google Play
+                    </a>
+                </p>
+                <p className="tester-text-steps">
+                    3. Keep the app on your device for at least 2 weeks to
+                    ensure you can provide meaningful feedback.
+                </p>
+                <p className="tester-text-steps">
+                    4. Write feedback on Google Play Store
+                </p>
+
+                 <h3>iOS:</h3>
+                <p className="tester-text-steps">
+                    1. 
+                </p>
+                <p className="tester-text-steps">
+                    2.
+                </p>
+                <p className="tester-text-steps">
+                    3. 
+                </p>
+                <p className="tester-text-steps">
+                    4. 
+                </p>
+            </div>
+
+            <div className="footer">
                 <p className="footer-text">Made with ❤️ by koleks92</p>
                 <div className="social-icons-container">
                     <a

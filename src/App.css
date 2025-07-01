@@ -8,6 +8,10 @@
     --color-red: #f24822;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     color: var(--color-black);
     transform: scale(1);
@@ -73,14 +77,52 @@ body {
 
 .logo-container-text {
     display: flex;
+    flex-direction: column;
     flex: 1;
 }
 
 .description-text {
     font-size: 1.2rem;
-    margin: 2rem;
+    margin-top: 2rem;
     color: var(--color-black);
 }
+
+.tester-text {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    color: var(--color-black);
+    transition: font-size 0.5s ease;
+}
+
+.tester-text:hover {
+    font-size: 1.35rem;
+}
+
+@media (min-width: 700px) {
+    .slogan-text {
+        font-size: 2.5rem;
+    }
+}
+
+.tester-description {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    margin-inline: 10rem;
+    color: var(--color-black);
+}
+
+.tester-text-steps {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    color: var(--color-black);
+}
+
+.tester-link {
+    color: var(--color-black);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}   
 
 .screenshot-container-one {
     position: relative;
@@ -118,6 +160,18 @@ body {
     align-items: center;
     justify-content: center; /* optional if you use absolute positioning */
     background-color: var(--color-background-third, #f2de77);
+}
+
+.tester-container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* optional if you use absolute positioning */
+    background-color: var(--color-background-second);
 }
 
 .footer {
