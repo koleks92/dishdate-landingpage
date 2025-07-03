@@ -53,12 +53,14 @@ body {
 }
 
 .logo {
-    width: 80vw;
+    max-height: 50vh;
+    max-width: 80vw;
 }
 
 @media (min-width: 700px) {
     .logo {
-        width: 50vw;
+        max-height: 50vh;
+        max-width: 80vw;
     }
 }
 
@@ -137,17 +139,17 @@ body {
     background-color: var(--color-background-second);
 }
 
-@media (min-width: 700px) {
-    .tester-content {
-        margin-inline: 10rem;
-    }
-}
 
 .tester-content {
     margin-inline: 1rem;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+@media (min-width: 700px) {
+    .tester-content {
+        margin-inline: 10rem;
+    }
 }
 
 .tester-text {
