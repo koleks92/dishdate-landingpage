@@ -191,10 +191,31 @@ function App() {
                     </p>
 
                     <h3>iOS:</h3>
-                    <p className="tester-text-steps">1.</p>
-                    <p className="tester-text-steps">2.</p>
-                    <p className="tester-text-steps">3.</p>
-                    <p className="tester-text-steps">4.</p>
+                    <p className="tester-text-steps">
+                        1. Download and install TestFlight for the app store:{" "}
+                        <a
+                            href="https://apps.apple.com/us/app/testflight/id899247664"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="tester-link"
+                        >
+                            TestFlight on App Store
+                        </a>
+                    </p>
+                    <p className="tester-text-steps">
+                        2. Download the app through TestFlight:{" "}
+                        <a
+                            href="https://testflight.apple.com/join/WMn9VyhX"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="tester-link"
+                        >
+                            TestFlight on App Store
+                        </a>
+                    </p>
+                    <p className="tester-text-steps">
+                        3. Provide feedback directly through TestFlight.
+                    </p>
                 </div>
             </div>
 
