@@ -150,15 +150,6 @@ function App() {
                 <div className="tester-content">
                     <h2>Become a Tester</h2>
 
-                    <p className="tester-description">
-                        We are looking for enthusiastic testers to help us
-                        refine our app before its official launch. If you're
-                        interested in being among the first to experience
-                        DishDate and provide valuable feedback, we would love to
-                        have you on board!
-                    </p>
-
-                    <h2> How to become a tester ?</h2>
                     <h3>Android:</h3>
                     <p className="tester-text-steps">
                         1. Join our Google Group:{" "}
