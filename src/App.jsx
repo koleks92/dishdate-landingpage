@@ -192,7 +192,7 @@ function App() {
 
                     <h3>iOS:</h3>
                     <p className="tester-text-steps">
-                        1. Download and install TestFlight for the app store:{" "}
+                        1. Download and install TestFlight from the app store:{" "}
                         <a
                             href="https://apps.apple.com/us/app/testflight/id899247664"
                             target="_blank"
@@ -210,7 +210,7 @@ function App() {
                             rel="noopener noreferrer"
                             className="tester-link"
                         >
-                            TestFlight on App Store
+                            DishDate on TestFlight
                         </a>
                     </p>
                     <p className="tester-text-steps">
