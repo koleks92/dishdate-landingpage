@@ -4,6 +4,8 @@ import screenshotOne from "./assets/screenshot-one.png";
 import screenshotTwo from "./assets/screenshot-two.png";
 import "./App.css";
 import { FaGithub, FaLinkedin, FaApple } from "react-icons/fa";
+import { IoMail } from "react-icons/io5";
+
 
 function App() {
     const [isBouncing, setIsBouncing] = useState(false);
@@ -241,6 +243,15 @@ function App() {
                     >
                         <FaGithub />
                     </a>
+                    <a
+                        href="mailto:dishdateapp@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="social-icons"
+                    >
+                        <IoMail />
+                    </a>
+
                 </div>
             </div>
         </>
