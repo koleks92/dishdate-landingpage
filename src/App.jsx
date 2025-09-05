@@ -106,7 +106,7 @@ function App() {
                         Try now!
                     </p>
                     <a
-                        href="https://apps.apple.com/us/app/dishdate/id6448311234"
+                        href="https://apps.apple.com/us/app/dishdate/id6748040783"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="download-icons"
