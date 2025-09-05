@@ -3,7 +3,7 @@ import logo from "./assets/logo.png";
 import screenshotOne from "./assets/screenshot-one.png";
 import screenshotTwo from "./assets/screenshot-two.png";
 import "./App.css";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaApple } from "react-icons/fa";
 
 function App() {
     const [isBouncing, setIsBouncing] = useState(false);
@@ -100,9 +100,21 @@ function App() {
                         <p className="slogan-text">Not a Maybe.</p>
                     </div>
                 </div>
+
                 <div className="logo-container-text">
+                                        <p className="description-download">
+                        Try now!
+                    </p>
+                    <a
+                        href="https://apps.apple.com/us/app/dishdate/id6448311234"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="download-icons"
+                    >
+                        <FaApple />
+                    </a>
                     <p className="description-text">
-                        Soon to be available on the App Store and Google Play.
+                        Soon to be available on the Google Play.
                     </p>
                     <p className="tester-text">
                         <a href="#tester-container">

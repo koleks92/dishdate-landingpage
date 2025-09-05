@@ -89,6 +89,17 @@ body {
     color: var(--color-black);
 }
 
+.description-download {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    color: var(--color-black);
+}
+
+.download-icons {
+    font-size: 5rem;
+}
+
 .screenshot-container-one {
     position: relative;
     overflow: hidden;
