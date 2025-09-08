@@ -100,14 +100,46 @@ body {
     font-size: 5rem;
 }
 
+.screenshot-text-container {
+    height: 10vh;
+    display: flex; /* Add this line */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.screenshot-text-top {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--color-black);
+}
+
+.screenshot-text-bottom {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--color-black);
+}
+
+@media (min-width: 700px) {
+    .screenshot-text-bottom {
+        font-size: 2rem;
+    }
+    .screenshot-text-top {
+        font-size: 2rem;
+    }
+}
+
 .screenshot-container-one {
     position: relative;
     overflow: hidden;
     width: 100vw;
     height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center; /* optional if you use absolute positioning */
+    flex-direction: column; /* This is key: stacks items vertically */
+    justify-content: space-between; /* Centers the whole column vertically */
+    align-items: center; /* Centers the items horizontally */
     background-color: var(--color-background-second);
 }
 
@@ -133,10 +165,12 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center; /* optional if you use absolute positioning */
+    flex-direction: column; /* This is key: stacks items vertically */
+    justify-content: space-between; /* Centers the whole column vertically */
+    align-items: center; /* Centers the items horizontally */
     background-color: var(--color-background-third, #f2de77);
 }
+
 
 .tester-container {
     position: relative;
@@ -150,7 +184,6 @@ body {
     background-color: var(--color-background-second);
 }
 
-
 .tester-content {
     margin-inline: 1rem;
     justify-content: center;
@@ -161,6 +194,10 @@ body {
     .tester-content {
         margin-inline: 10rem;
     }
+}
+
+.tester-link-container {
+    height: 5vh;
 }
 
 .tester-text {

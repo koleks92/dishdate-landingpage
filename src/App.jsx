@@ -6,7 +6,6 @@ import "./App.css";
 import { FaGithub, FaLinkedin, FaApple } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 
-
 function App() {
     const [isBouncing, setIsBouncing] = useState(false);
 
@@ -104,9 +103,7 @@ function App() {
                 </div>
 
                 <div className="logo-container-text">
-                                        <p className="description-download">
-                        Try now!
-                    </p>
+                    <p className="description-download">Try now!</p>
                     <a
                         href="https://apps.apple.com/us/app/dishdate/id6748040783"
                         target="_blank"
@@ -118,15 +115,22 @@ function App() {
                     <p className="description-text">
                         Soon to be available on the Google Play.
                     </p>
-                    <p className="tester-text">
-                        <a href="#tester-container">
-                            Become a <b>tester</b> and help us with the final
-                            touches!
-                        </a>
-                    </p>
+                    <div className="tester-link-container">
+                        <p className="tester-text">
+                            <a href="#tester-container">
+                                Become a <b>tester</b> and help us with the
+                                final touches!
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
             <div className="screenshot-container-one" ref={firstContainerRef}>
+                <div className="screenshot-text-container">
+                    <p className="screenshot-text-top">
+                        Stop arguing, start eating.
+                    </p>
+                </div>
                 <img
                     src={screenshotOne}
                     className="screenshot_one"
@@ -140,8 +144,18 @@ function App() {
                         top: "50%",
                     }}
                 />
+                <div className="screenshot-text-container">
+                    <p className="screenshot-text-bottom">
+                        Deciding on dinner just got easier.
+                    </p>
+                </div>
             </div>
             <div className="screenshot-container-two" ref={secondContainerRef}>
+                <div className="screenshot-text-container">
+                    <p className="screenshot-text-top">
+                        Find your flavor, together.
+                    </p>
+                </div>
                 <img
                     src={screenshotTwo}
                     className="screenshot_two"
@@ -155,6 +169,11 @@ function App() {
                         top: "50%",
                     }}
                 />
+                <div className="screenshot-text-container">
+                    <p className="screenshot-text-bottom">
+                        Dinner plans, simplified.
+                    </p>
+                </div>
             </div>
             <div
                 className="tester-container"
@@ -251,7 +270,6 @@ function App() {
                     >
                         <IoMail />
                     </a>
-
                 </div>
             </div>
         </>
