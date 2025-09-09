@@ -96,8 +96,20 @@ body {
     color: var(--color-black);
 }
 
-.download-icons {
+#download-icons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#download-icons_1 {
     font-size: 5rem;
+}
+
+#download-icons_2 {
+    font-size: 4.8rem;
 }
 
 .screenshot-text-container {

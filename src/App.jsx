@@ -4,6 +4,9 @@ import screenshotOne from "./assets/screenshot-one.png";
 import screenshotTwo from "./assets/screenshot-two.png";
 import "./App.css";
 import { FaGithub, FaLinkedin, FaApple } from "react-icons/fa";
+import { IoLogoAndroid } from "react-icons/io";
+import { DiAndroid } from "react-icons/di";
+
 import { IoMail } from "react-icons/io5";
 
 function App() {
@@ -104,17 +107,25 @@ function App() {
 
                 <div className="logo-container-text">
                     <p className="description-download">Try now!</p>
-                    <a
-                        href="https://apps.apple.com/us/app/dishdate/id6748040783"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="download-icons"
-                    >
-                        <FaApple />
-                    </a>
-                    <p className="description-text">
-                        Soon to be available on the Google Play.
-                    </p>
+                    <div id="download-icons-container">
+                        <a
+                            href="https://apps.apple.com/us/app/dishdate/id6748040783"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            id="download-icons_1"
+                        >
+                            <FaApple />
+                        </a>
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.koleks92.DishDate"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            id="download-icons_2"
+                        >
+                            <DiAndroid />
+                        </a>
+                    </div>
+
                     <div className="tester-link-container">
                         <p className="tester-text">
                             <a href="#tester-container">
